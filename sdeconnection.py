@@ -1,0 +1,3 @@
+import arcpy
+
+arcpy.CreateDatabaseConnection_management(out_folder_path="//ripsagsdata/data/Connectionfiles_10_4", out_name="lfu_webview", database_platform="ORACLE", instance="sde:oracle11g:sde_db_rac", account_authentication="DATABASE_AUTH", username="lfu_webview", password="*****", save_user_pass="SAVE_USERNAME", database="", schema="SDE", version_type="TRANSACTIONAL", version="SDE.DEFAULT", date="")
