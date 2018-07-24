@@ -28,6 +28,9 @@
 import os
 import csv
 import arcpy
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def main(folder, outputfile):
     with open(outputfile, "wb") as f:

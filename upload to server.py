@@ -5,7 +5,7 @@ import arcpy, sys, os, string
 inFolder = raw_input("Please enter folder containing 10.2 MXDs to Publish to ArcServer: ")
 
 #specify connection File Path
-connectionFilePath = r'C:\Users\53_e_rv\AppData\Roaming\ESRI\Desktop10.3\ArcCatalog\arcgis on 10.41.253.42_6080 (Admin).ags'
+connectionFilePath = r'C:\Users\53_e_rv\AppData\Roaming\ESRI\Desktop10.5\ArcCatalog\arcgis on ripsgdi18.lubw.bwl.de_6080 (admin).ags'
 
 #look in folder for mxds
 MapPath= []
@@ -24,7 +24,7 @@ for file in MapFolder:
 
         #Create Map SD Draft
         print "\n" + "Publishing: " + base
-        analysis = arcpy.mapping.CreateMapSDDraft(mxd, SDDraft, serviceName, "FROM_CONNECTION_FILE", connectionFilePath, "False", "GDI",  "", "")
+        analysis = arcpy.mapping.CreateMapSDDraft(mxd, SDDraft, serviceName, "FROM_CONNECTION_FILE", connectionFilePath, "False", "wms",  "", "")
 
         # stage and upload the service if the sddraft analysis did not contain errors
         if analysis['errors'] == {}:
